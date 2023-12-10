@@ -41,6 +41,7 @@ do
 				    	    		echo "Cloning from Bassamantor's repo..."
 							git clone https://github.com/bassamanator/Sovol-SV06-firmware.git
 					    		;;
+						*) break 2;;
 				    	esac
 				done
 				;;
