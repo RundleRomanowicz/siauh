@@ -1,10 +1,10 @@
 #!/bin/bash
 PS3='Please enter your choice: '
-options=("Option 1" "Option 2" "Option 3" "Quit")
+options=("Clone Config" "Scan Device" "Option 3" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
-        "Option 1")
+        "Scan Device")
             echo "Scanning for connected Klipper device"
             output_file="klipper_devices.cfg"
             devices="/dev/serial/by-id/*"
@@ -21,8 +21,57 @@ do
             
             echo "Device configuration has been written to $output_file."
             ;;
-        "Option 2")
-            echo "you chose choice 2"
+        "Clone Config")
+            echo "Please select your printer:"
+	    printer_options=("SV06" "SV06 Plus" "SV07" "SV07 Plus" "Quit")
+	    select opt2 in "${printer_options[@]}"
+	    do
+	    	case $opt2 in
+			"SV06")
+				echo "Select Repo to clone from..."
+				repo_options_06=("Sovol" "Bassamantor")
+				select opt_06 in "${repo_options_06[@]}"
+				do
+				    case $opt_06 in
+					    "Sovol")
+						    echo "Cloning Sovol Default config..."
+						    ;;
+					    "Bassamantor")
+				    		    echo "Cloning from Bassamantor's repo..."
+						    ;;
+				    esac
+				done
+				;;
+			"SV06 Plus")
+				echo "Select Repo to clone from..."
+				repo_options_06P = ("Sovol" "Bassamantor")
+				select opt_06P in "${repo_options_06P[@]}"
+				do
+				   case $opt_06P in
+					"Sovol")
+						echo "Cloning Sovol Default Config..."
+						;;
+					"Bassamantor")
+						echo "Cloning from Bassamantor's repo..."
+						;;
+				   esac
+				done
+				;;
+			"SV07")
+				echo "Cloning printer config from repo..."
+				echo "..."
+				;;
+			"SV07 Plus")
+				echo "Cloning printer config from repo..."
+				echo "..."
+				;;
+			"Quit")
+				break
+				;;
+			
+		esac
+	    done
+		
             ;;
         "Option 3")
             echo "you chose choice $REPLY which is $opt"
@@ -33,5 +82,3 @@ do
         *) echo "invalid option $REPLY";;
     esac
 done
-
-
