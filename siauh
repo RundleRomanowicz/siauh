@@ -29,7 +29,7 @@ do
 	    	case $opt2 in
 			"SV06")
 				echo "Select Repo to clone from..."
-				repo_options_06=("Sovol" "Bassamantor")
+				repo_options_06=("Sovol" "Bassamantor" "Go Back")
 				select opt_06 in "${repo_options_06[@]}"
 				do
 					case $opt_06 in
@@ -41,7 +41,7 @@ do
 				    	    		echo "Cloning from Bassamantor's repo..."
 							git clone https://github.com/bassamanator/Sovol-SV06-firmware.git
 					    		;;
-						*) break 2;;
+						"Go Back) break 3;;
 				    	esac
 				done
 				;;
