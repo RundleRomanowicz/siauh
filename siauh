@@ -46,7 +46,7 @@ do
 				;;
 			"SV06 Plus")
 				echo "Select Repo to clone from..."
-				repo_options_06P = ("Sovol" "Bassamantor")
+				repo_options_06P=("Sovol" "Bassamantor")
 				select opt_06P in "${repo_options_06P[@]}"
 				do
 					case $opt_06P in
@@ -61,7 +61,7 @@ do
 				;;
 			"SV07")
 				echo "Select Repo to clone from..."
-				repo_options_07 = ("Sovol" "Bassamantor")
+				repo_options_07=("Sovol" "Bassamantor")
 				select opt_07 in "${repo_options_06P[@]}"
 				do
 					case $opt_07 in
@@ -76,7 +76,7 @@ do
 				;;
 			"SV07 Plus")
 				echo "Select Repo to clone from..."
-				repo_options_07P = ("Sovol" "Bassamantor")
+				repo_options_07P=("Sovol" "Bassamantor")
 				select opt_07P in "${repo_options_06P[@]}"
 				do
 					case $opt_07P in
