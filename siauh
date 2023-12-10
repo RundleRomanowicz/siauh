@@ -32,14 +32,14 @@ do
 				repo_options_06=("Sovol" "Bassamantor")
 				select opt_06 in "${repo_options_06[@]}"
 				do
-				    case $opt_06 in
-					    "Sovol")
-						    echo "Cloning Sovol Default config..."
-						    ;;
-					    "Bassamantor")
-				    		    echo "Cloning from Bassamantor's repo..."
-						    ;;
-				    esac
+					case $opt_06 in
+						"Sovol")
+					    		echo "Cloning Sovol Default config..."
+					    		;;
+						"Bassamantor")
+				    	    		echo "Cloning from Bassamantor's repo..."
+					    		;;
+				    	esac
 				done
 				;;
 			"SV06 Plus")
@@ -47,23 +47,45 @@ do
 				repo_options_06P = ("Sovol" "Bassamantor")
 				select opt_06P in "${repo_options_06P[@]}"
 				do
-				   case $opt_06P in
-					"Sovol")
-						echo "Cloning Sovol Default Config..."
-						;;
-					"Bassamantor")
-						echo "Cloning from Bassamantor's repo..."
-						;;
-				   esac
+					case $opt_06P in
+						"Sovol")
+							echo "Cloning Sovol Default Config..."
+							;;
+						"Bassamantor")
+							echo "Cloning from Bassamantor's repo..."
+							;;
+				   	esac
 				done
 				;;
 			"SV07")
-				echo "Cloning printer config from repo..."
-				echo "..."
+				echo "Select Repo to clone from..."
+				repo_options_07 = ("Sovol" "Bassamantor")
+				select opt_07 in "${repo_options_06P[@]}"
+				do
+					case $opt_07 in
+						"Sovol")
+							echo "Cloning Sovol Default Config..."
+							;;
+						"Bassamantor")
+							echo "Cloning from Bassamantor's repo..."
+							;;
+				   	esac
+				done
 				;;
 			"SV07 Plus")
-				echo "Cloning printer config from repo..."
-				echo "..."
+				echo "Select Repo to clone from..."
+				repo_options_07P = ("Sovol" "Bassamantor")
+				select opt_07P in "${repo_options_06P[@]}"
+				do
+					case $opt_07P in
+						"Sovol")
+							echo "Cloning Sovol Default Config..."
+							;;
+						"Bassamantor")
+							echo "Cloning from Bassamantor's repo..."
+							;;
+				   	esac
+				done
 				;;
 			"Quit")
 				break
