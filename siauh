@@ -42,7 +42,7 @@ do
 							git clone https://github.com/bassamanator/Sovol-SV06-firmware.git
 					    		;;
 						"Go Back") 
-							break 3
+							break 4
 							;;
 				    	esac
 				done
