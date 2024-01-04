@@ -69,9 +69,11 @@ do
 				do
 					case $opt_07 in
 						"Sovol")
+							echo "To be developed"
 							echo "Cloning Sovol Default Config..."
 							;;
 						"Bassamantor")
+							echo "To be developed"
 							echo "Cloning from Bassamantor's repo..."
 							;;
 				   	esac
@@ -84,9 +86,11 @@ do
 				do
 					case $opt_07P in
 						"Sovol")
+							echo "To be developed"
 							echo "Cloning Sovol Default Config..."
 							;;
 						"Bassamantor")
+							echo "To be developed"
 							echo "Cloning from Bassamantor's repo..."
 							;;
 				   	esac
