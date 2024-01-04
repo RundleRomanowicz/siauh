@@ -34,11 +34,15 @@ do
 				do
 					case $opt_06 in
 						"Sovol")
-					    		echo "Cloning Sovol Default config..."
+					    		echo "Back up existing config folder..."
+							mv /printer_data/config /printer_data/backup_config
+							echo "Cloning Sovol Default config..."
 							git clone https://github.com/dakhunter/SV06Sovol.git ~/printer_data/config
 					    		;;
 						"Bassamantor")
-				    	    		echo "Cloning from Bassamantor's repo..."
+							echo "Back up existing config folder..."
+							mv /printer_data/config /printer_data/backup_config
+							echo "Cloning Sovol Default config..."
 							git clone https://github.com/bassamanator/Sovol-SV06-firmware.git ~/printer_data/config
 					    		;;
 						"Go Back") 
