@@ -1,4 +1,5 @@
 #!/bin/bash
+DIRECTORY='~/printer_data/config"
 PS3='Please enter your choice: '
 options=("Clone Config" "Scan Device" "Option 3" "Quit")
 select opt in "${options[@]}"
@@ -34,14 +35,20 @@ do
 				do
 					case $opt_06 in
 						"Sovol")
-					    		echo "Back up existing config folder..."
-							mv ~/printer_data/config ~/printer_data/backup_config
+							if [ -d "$DIRECTORY" ]; then
+								echo "$DIRECTORY does exist."
+					    			echo "Back up existing config folder..."
+								mv ~/printer_data/config ~/printer_data/backup_config
+							fi
 							echo "Cloning Sovol Default config..."
 							git clone https://github.com/dakhunter/SV06Sovol.git ~/printer_data/config
 					    		;;
 						"Bassamantor")
-							echo "Back up existing config folder..."
-							mv ~/printer_data/config ~/printer_data/backup_config
+							if [ -d "$DIRECTORY" ]; then
+								echo "$DIRECTORY does exist."
+					    			echo "Back up existing config folder..."
+								mv ~/printer_data/config ~/printer_data/backup_config
+							fi
 							echo "Cloning Sovol Default config..."
 							git clone https://github.com/bassamanator/Sovol-SV06-firmware.git ~/printer_data/config
 					    		;;
