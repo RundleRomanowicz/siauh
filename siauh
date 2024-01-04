@@ -1,5 +1,5 @@
 #!/bin/bash
-DIRECTORY='~/printer_data/config"
+DIRECTORY='~/printer_data/config'
 PS3='Please enter your choice: '
 options=("Clone Config" "Scan Device" "Option 3" "Quit")
 select opt in "${options[@]}"
