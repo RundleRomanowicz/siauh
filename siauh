@@ -35,7 +35,7 @@ do
 				do
 					case $opt_06 in
 						"Sovol")
-							if [ -d "$DIRECTORY" ]; then
+							if [ -d ~/printer_data/config ]; then
 								echo "$DIRECTORY does exist."
 					    			echo "Back up existing config folder..."
 								mv ~/printer_data/config ~/printer_data/backup_config
@@ -44,7 +44,7 @@ do
 							git clone https://github.com/dakhunter/SV06Sovol.git ~/printer_data/config
 					    		;;
 						"Bassamantor")
-							if [ -d "$DIRECTORY" ]; then
+							if [ -d ~/printer_data/config ]; then
 								echo "$DIRECTORY does exist."
 					    			echo "Back up existing config folder..."
 								mv ~/printer_data/config ~/printer_data/backup_config
