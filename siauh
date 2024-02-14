@@ -38,16 +38,27 @@ do
 			# 	echo "" >> "$output_file"
 			# done
 
-		if [ -d "/dev/serial/by-id/" ];then
-        path=$(ls /dev/serial/by-id/*)
+		if [ -d "/dev/serial/by-id/" ]
+		then
+      	path=$(ls /dev/serial/by-id/*)
         # echo $path
-			if [ -f $output_file ];then
-				echo $output_file
-				# sed -i 's|original text|replacement text|g' $output_file
-				sed -i "s|serial:.*|serial:'$path'|g" $output_file
-				# sed -i 's|serial:.*|serial:${path}|g' $output_file
-				# sed -i 's|serial:|serial:*|g' test.txt
-			fi
+				if [ -f $output_file ];then
+					echo $output_file
+					# sed -i 's|original text|replacement text|g' $output_file
+					sed -i "s|serial:.*|serial:'$path'|g" $output_file
+					# sed -i 's|serial:.*|serial:${path}|g' $output_file
+					# sed -i 's|serial:|serial:*|g' test.txt
+				fi
+		else
+			path=$(ls /dev/serial/by-path/*)
+        # echo $path
+				if [ -f $output_file ];then
+					echo $output_file
+					# sed -i 's|original text|replacement text|g' $output_file
+					sed -i "s|serial:.*|serial:'$path'|g" $output_file
+					# sed -i 's|serial:.*|serial:${path}|g' $output_file
+					# sed -i 's|serial:|serial:*|g' test.txt
+				fi
 		fi
 			#done
 				
