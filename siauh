@@ -84,6 +84,7 @@ do
 									fi
 									echo "Cloning Sovol Default config..."
 									git clone https://github.com/dakhunter/SV06Sovol.git ~/printer_data/config
+									sed -i '1i[include klipper_device.cfg]' $DIRECTORY"printer.cfg"
 							    		;;
 								"Bassamantor")
 									if [ -d "$DIRECTORY" ]; then
